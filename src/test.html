@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        margin: 0 auto;
+        width: 100%;
+      }
+      .content img {
+        display: block;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="content">
+      <img
+        alt="测试不同分辨率显示图片"
+        src="/img/ad001.png"
+        srcset="./img/ad001.png 480w, ./img/ad001-m.png 800w, ./img/ad001-l.png 1600w"
+        sizes="(min-width:800px) 800px, 100vw"
+      />
+    </section>
+    <h1>闪送</h1>
+    <section class="content">
+      <picture>
+        <source media="(max-width:30em)" srcset="./img/ad002.png 480w" />
+        <source media="(max-width:50em)" srcset="./img/ad002-m.png 800w" />
+        <source media="(max-width:87em)" srcset="./img/ad002-l.png 1600w" />
+        <source media="(orientation:landscape)" srcset="./img/ad002-m.png 800w" />
+        <source type="image/svg+xml" srcset="logo.svg" />
+        <source type="image/webp" srcset="logo.webp 400w, logo-m.webp 800w" />
+        <img src="./img/ad002.png" />
+      </picture>
+    </section>
+  </body>
+</html>
